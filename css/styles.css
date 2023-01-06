@@ -1,6 +1,6 @@
 :root {
   --actual-height: 100vh; /* replaced by JS on load */
-  --bg-color: #eeeeee;
+  --bg-color: #dddddd;
   --button-color: #444444;
   --button-text-color: #dddddd;
   --card-color: #a9bd8f;
@@ -49,6 +49,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 2px solid black;
+  border-radius: calc(var(--header-height) * 0.1);
 }
 #hamburger-bar-container {
   width: 100%;
@@ -78,7 +80,7 @@ header {
   transform: rotate(-40deg) scaleX(77%) translate(calc(var(--header-height) * 0.24), calc(var(--header-height) * -0.2));
 }
 
-menu {
+nav {
   position: fixed;
   margin: 0;
   padding: calc(var(--header-height) * 0.2);
@@ -92,16 +94,22 @@ menu {
   transform: translateX(100%);
   color: var(--button-text-color);
   text-shadow: 1px 1px 4px black;
-  font-size: 2em;
+  font-size: 1.5em;
   transition: transform 400ms ease;
 }
-menu.open {
+nav.open {
   transform: none;
 }
-.menu-item {
+.nav-item {
   width: 50vw;
-  border: calc(var(--header-height) * 0.1) solid black;
-  border-radius: calc(var(--header-height) * 0.2);
+  border: 2px solid black;
+  border-radius: calc(var(--header-height) * 0.1);
   padding: 5%;
-  margin: calc(var(--header-height) * 0.1)
+  margin: calc(var(--header-height) * 0.1);
+  box-shadow: 2px 2px 2px #00000055;
+}
+
+.nav-item.selected {
+  color: green;
+  box-shadow: unset;
 }
