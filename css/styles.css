@@ -197,3 +197,7 @@ section.showing {
   align-items: center;
   padding-top: 12px;
 }
+
+.warning {
+  color: red;
+}
