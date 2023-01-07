@@ -204,3 +204,41 @@ section.showing {
   justify-content: space-between;
   align-items: center;
 }
+
+@media screen and (orientation: landscape) and (min-width: 480px) {
+  :root {
+    --header-height: 3.5em;
+  }
+  #hamburger {
+    display: none;
+  }
+  nav {
+    margin: 0;
+    right: 0;
+    width: unset;
+    flex-direction: row;
+    background-color: transparent;
+    color: var(--button-text-color);
+    text-shadow: unset;
+    font-size: 1.5em;
+    transition: transform 400ms ease;
+    z-index: 2;
+    height: var(--header-height);
+    top: 0;
+    margin: 0;
+    transform: none;
+  }
+  .nav-item {
+    width: max-content;
+    border: none;
+    padding: 0;
+    margin: 0 1em;
+    box-shadow: unset;
+  }
+  section {
+    max-width: 800px;
+  }
+  .project-card img {
+    max-width: 300px;
+  }
+}
