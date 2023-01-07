@@ -198,3 +198,9 @@ section.showing {
 .warning {
   color: red;
 }
+
+.contact-segment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
