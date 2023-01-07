@@ -11,7 +11,7 @@ function handleHamburgerClick() {
   document.getElementsByTagName('nav')[0].classList.toggle('open');
 }
 
-function handleNavItemClick() {
+async function handleNavItemClick() {
   document.getElementById('projects-button').classList.remove('selected');
   document.getElementById('about-button').classList.remove('selected');
   document.getElementById('contact-button').classList.remove('selected');
